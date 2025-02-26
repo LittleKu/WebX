@@ -1,5 +1,5 @@
 deps = {
-  'src' : 'https://github.com/LittleKu/base.git',
+  'src' : 'https://github.com/LittleKu/base@ca2f5975eb047022d3a6d38ec07e187f9c49cc56',
 }
 
 hooks = [
