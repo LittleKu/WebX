@@ -2,6 +2,25 @@ import("//base.gni")
 
 libcef_components = [ "libcef:libcef_dll_wrapper" ]
 
+base_shared_library("libwebx_core") {
+  output_name = "libwebx"
+
+  defines = [ "WEBX_LIBWEBX_EXPORTS" ]
+
+  # common sources
+  sources = [
+    "src/implement/libwebx_impl.cc",
+    "src/implement/libwebx_impl.h",
+    "src/libwebx.cc",
+  ]
+
+  if (is_win) {
+    sources += [ "//base/win/dllmain.cc" ]
+  }
+
+  deps = [ "//base" ]
+}
+
 group("libwebx") {
-  public_deps = libcef_components
+  public_deps = [ ":libwebx_core" ] + libcef_components
 }
