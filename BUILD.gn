@@ -1,1 +1,5 @@
 import("//base.gni")
+
+group("webx") {
+  public_deps = ["libwebx"]
+}

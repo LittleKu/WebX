@@ -1,0 +1,7 @@
+import("//base.gni")
+
+libcef_components = [ "libcef:libcef_dll_wrapper" ]
+
+group("libwebx") {
+  public_deps = libcef_components
+}
