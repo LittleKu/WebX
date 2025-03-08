@@ -1,3 +1,5 @@
+gclient_gn_args_from = 'src'
+
 vars = {
   'libcef_cdn_url': 'https://cef-builds.spotifycdn.com/',
   'libcef_package': 'cef_binary_131.4.1+g437feba+chromium-131.0.6778.265_windows64.tar.bz2',
