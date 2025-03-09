@@ -13,7 +13,7 @@
 #include "base/win/windows_full.h"
 #endif
 
-#include "webx/libwebx/include/libwebx.h"
+#include "webx/include/libwebx.h"
 #include "webx/libwebx/src/common/libwebx_common.h"
 
 #include <atomic>

@@ -4,8 +4,8 @@
  * @date      : 2025-03-08 15:36:16
  * @brief     :
  */
-#ifndef WEBX_LIBWEBX_INCLUDE_LIBWEBX_H_
-#define WEBX_LIBWEBX_INCLUDE_LIBWEBX_H_
+#ifndef WEBX_INCLUDE_LIBWEBX_H_
+#define WEBX_INCLUDE_LIBWEBX_H_
 
 #if defined(_WIN32)
 
@@ -91,4 +91,4 @@ extern "C" {
 WEBX_LIBWEBX_API bool CreateWebX(IWebX** webx);
 }
 
-#endif  // !WEBX_LIBWEBX_INCLUDE_LIBWEBX_H_
+#endif  // !WEBX_INCLUDE_LIBWEBX_H_

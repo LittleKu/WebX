@@ -7,7 +7,7 @@
 #ifndef WEBX_LIBWEBX_SRC_COMMON_LIBWEBX_COMMON_H_
 #define WEBX_LIBWEBX_SRC_COMMON_LIBWEBX_COMMON_H_
 
-#include "webx/libwebx/include/libwebx.h"
+#include "webx/include/libwebx.h"
 
 #include <atomic>
 
