@@ -696,3 +696,35 @@ base_static_library("libcef_dll_wrapper") {
     "//webx/libcef/libcef_dll/ctocpp/zip_reader_ctocpp.h",
   ]
 }
+
+base_source_set("libcef_common") {
+  sources = [
+    "common/webx_libcef_app.cc",
+    "common/webx_libcef_app.h",
+  ]
+
+  public_deps = [ ":libcef_dll_wrapper" ]
+}
+
+base_executable("webx_helper") {
+  deps = [ ":libcef_common" ]
+
+  if (is_debug) {
+    lib_dirs = [ "//webx/libcef/Debug" ]
+  } else {
+    lib_dirs = [ "//webx/libcef/Release" ]
+  }
+
+  if (is_win) {
+    libs = [ "libcef.lib" ]
+    configs += [ "//build/config/win:windowed" ]
+  }
+
+  sources = [
+    "webx_helper/app/webx_libcef_other_app.cc",
+    "webx_helper/app/webx_libcef_other_app.h",
+    "webx_helper/app/webx_libcef_renderer_app.cc",
+    "webx_helper/app/webx_libcef_renderer_app.h",
+    "webx_helper/main.cc",
+  ]
+}

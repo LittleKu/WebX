@@ -1,6 +1,9 @@
 import("//base.gni")
 
-libcef_components = [ "libcef:libcef_dll_wrapper" ]
+libcef_components = [
+  "libcef:webx_helper",
+  "libcef:libcef_dll_wrapper",
+]
 
 base_shared_library("libwebx_core") {
   output_name = "libwebx"
